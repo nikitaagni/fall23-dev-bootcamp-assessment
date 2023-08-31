@@ -1,15 +1,20 @@
 /* Your Styles Here */
 body {
-    background-color: rgba(0, 0, 0, 0.1);
-    background-image: url('img/background.png');
+    background-color: rgba(0, 22, 101, 0.5);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 100vh;
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
     }
 .card {
+    width: 18rem;
+    margin: 10px auto; /* Center the cards horizontally and add space between them */
+    text-align: center;
+    border: 1px solid #ddd;
    background-color: rgb(93, 156, 205);
    border-radius: 25px;
    box-shadow: 10px 10px #233f8b;
@@ -30,5 +35,25 @@ img {
     transform: scale(1.02);
     transition: transform 0.3s ease-in-out;
 }
-
-
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+}
+.button {
+    text-align: center;
+    background-color: rgb(179, 210, 216);
+    color: black;
+    border-radius: 25px;
+    text-decoration: none;
+    display: block;
+    border: none; /* Set border to none */
+    padding: 5px 20px; 
+    margin: 10px auto; /
+}
+.button:hover {
+    background-color: #2980b9;
+    text-decoration: none;
+}

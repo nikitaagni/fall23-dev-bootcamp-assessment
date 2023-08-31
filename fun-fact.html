@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Fun Fact</title>
+</head>
+<body>
+    <div class="card">
+        <h2>Fun facts!</h2>
+        <p>Click the button to cycle through fun facts!</p>
+        <button id="factButton" class="button">Show Fun Fact</button>
+        <p id="fact"></p>
+    </div>
+    
+    <div class="card">
+        <button id="goBackButton" class="button">Go Back</button>
+    </div>
+
+    <script>
+        const facts = [
+            "I was born in New York and I lived there for 16 years.",
+            "I've never had a pet (but I've always begged my parents for a puppy!)",
+            "Penguins are my favorite animal and I love going to the Georgia Aquarium just to see them!"
+        ];
+
+        const factButton = document.getElementById('factButton');
+        const goBackButton = document.getElementById('goBackButton');
+        const factDisplay = document.getElementById('fact');
+
+        let currentFactIndex = 0;
+
+        function showNextFact() {
+            factDisplay.textContent = facts[currentFactIndex];
+            currentFactIndex = (currentFactIndex + 1) % facts.length;
+        }
+
+        factButton.addEventListener('click', showNextFact);
+
+        goBackButton.addEventListener('click', () => {
+            history.back(); // Go back to the previous page
+        });
+    </script>
+</body>
+</html>
