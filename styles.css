@@ -1,6 +1,7 @@
 /* Your Styles Here */
 body {
     background-color: rgba(0, 22, 101, 0.5);
+    background: url('img/background.png') repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
